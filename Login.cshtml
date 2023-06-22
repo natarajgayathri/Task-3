@@ -1,0 +1,123 @@
+﻿@{
+    Layout = null;
+}
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <title>Login Page</title>
+            <link href="~/Scripts/MyCss/login.css" rel="stylesheet" />
+            <script src="~/Scripts/MyJavaScript/login.js"></script>
+            <style>
+                .horizontal_list {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 4px;
+                }
+
+                .logo img {
+                    width: 80px;
+                    height: 60px;
+                }
+
+                .horizontal_list ul {
+                    list-style-type: none;
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .horizontal_list ul li {
+                    margin: 25px 35px 25px 35px;
+                }
+
+                .horizontal_list ul li a {
+                    font-size: 18px;
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+
+                .horizontal_list ul li a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+
+            <!--HEADER-->
+            <header style="padding-bottom: 30px;">
+                <nav class="horizontal_list" style="background-color: #660033;">
+                    <div class="logo">
+                        <img src="~/Content/Images/logo.jpg">
+                    </div>
+                    <ul>
+                        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                        <li><a href="@Url.Action("Aboutus", "Home")">About us</a></li>
+                        <li><a href="@Url.Action("Contactus", "Home")">Contact us</a></li>
+                        <li><a href="@Url.Action("Login", "Home")">Login</a></li>
+                        <li><a href="@Url.Action("UserRegistration", "Home")">Register</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!--HEADER-->
+
+            <center>
+                <div>
+                    <form class="form-cls">
+                        <div>
+                            <h1 class="main-heading">Login here</h1>
+                        </div>
+                        <div>
+                            <input class="field" type="email" placeholder="Email Address" id="username_input" onfocusout="validate_username()">
+                        </div>
+                        <div>
+                            <h5><label id="user_error"></label></h5>
+                        </div>
+                        <div>
+                            <input class="field" type="password" placeholder="Password" id="password_input" onfocusout="validate_pwd()">
+                        </div>
+                        <div>
+                            <h5><label id="pwd_error"></label></h5>
+                        </div>
+                        <div>
+                            <pre><input type="checkbox"><label class="rememberme">Remember me</label>              <a class="forgetpass">forget password?</a></pre>
+                        </div>
+                        <div>
+                            <button id="btn">Login</button>
+                        </div>
+                        <div>
+                            <p class="not-member">Not a member?  <a href="signup.html" class="register">Register here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </center><br><br>
+
+            <!--FOOTER-->
+            <div class="foot">
+                <h4>Address</h4>
+                <blockquote>
+                    <address>
+                        90,80 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    </address>
+                </blockquote>
+                <div>
+                    <a href=""><img src="~/Content/Images/facebook.png" alt="Image not found" width="20px" height="20px"></a>
+                    <a href=""><img src="~/Content/Images/instagram.png" alt="Image not found" width="20px" height="20px"></a>
+                    <a href=""><img src="~/Content/Images/linkedin.png" alt="Image not found" width="20px" height="20px"></a>
+                    <a href=""><img src="~/Content/Images/twitter.png" alt="Image not found" width="20px" height="20px"></a>
+                </div><br />
+                <center>
+                    <div>&copy; Myproject</div>
+                </center>
+            </div>
+            <!--FOOTER-->
+            <!--
+    ------------------color-------------------------
+    background-color:#660033;
+    background-color:#4d4dff;
+    color:white;
+     -->
+            </div>
+        </body>
+</html>

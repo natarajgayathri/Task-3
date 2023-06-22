@@ -1,0 +1,65 @@
+﻿body {
+    background-color: #ffcce6;
+}
+.form1 {
+    background-color: #660033;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#date_of_birth {
+    margin: 10px 0px 10px 0px;
+    padding: 8px;
+    width: 300px;
+    color: #660033;
+    border-radius: 5px;
+}
+.dropdown {
+    width: 315px;
+    padding: 7px;
+    color: grey;
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+}
+.gender {
+    margin: 10px 0px 10px 0px;
+    color: white;
+}
+.main-heading {
+    background-color: #660033;
+    color: white;
+    padding: 10px;
+}
+.fields {
+    padding: 8px;
+    width: 300px;
+    color: #660033;
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+}
+.btn {
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    color: #660033;
+    padding: 8px;
+    width: 230px;
+    border-radius: 15px;
+    margin: 10px 0px 10px 0px;
+}
+.account {
+    margin: 10px 0px 10px 0px;
+    color: white;
+}
+
+.login {
+    color: #4d4dff;
+}
+
+.foot {
+    margin-top:30px;
+    background-color: #660033;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

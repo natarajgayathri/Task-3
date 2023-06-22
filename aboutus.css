@@ -1,0 +1,42 @@
+body{
+background-color:#ffcce6;
+}
+
+.about_us{
+background-color:#660033; 
+padding:40px; 
+text-align:center; 
+color:white;
+}
+
+.foot{
+background-color:#660033; 
+color:white; 
+text-align:center; 
+padding:10px;
+}
+
+.div1{
+padding:20px;
+}
+
+.head1{
+ color:#660033;
+}
+
+.para{
+ text-align: justify;
+}
+
+.td1{
+padding:30px; 
+background-color:#ffb3d9;
+}
+
+h3{
+text-align:center; font-size:20px;
+}
+
+.gallery{
+padding:20px;
+}

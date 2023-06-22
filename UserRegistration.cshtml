@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        UserRegistration
+    </title>
+    <link href="~/Scripts/MyCss/UserRegisteration.css" rel="stylesheet" />
+    <script src="~/Scripts/MyJavaScript/UserRegistrationValidation.js"></script>
+    <style>
+        .horizontal_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 60px;
+        }
+
+        .horizontal_list ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .horizontal_list ul li {
+            margin: 25px 35px 25px 35px;
+        }            
+
+        .horizontal_list ul li a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .horizontal_list ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body onload="dob()">
+
+    <!--
+    ------------------color-------------------------
+    background-color:#660033;
+    background-color:#4d4dff;
+    color:white;
+     -->
+    <!--HEADER-->
+    <header style="padding-bottom: 30px;">
+        <nav class="horizontal_list" style="background-color: #660033;">
+            <div class="logo">
+                <img src="~/Content/Images/logo.jpg">
+            </div>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("Aboutus", "Home")">About us</a></li>
+                <li><a href="@Url.Action("Contactus", "Home")">Contact us</a></li>
+                <li><a href="@Url.Action("Login", "Home")">Login</a></li>
+                <li><a href="@Url.Action("UserRegistration", "Home")">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--HEADER-->
+
+    <center>
+        <div>
+            <form class="form1">
+                <div>
+                    <h1 class="main-heading">Register here</h1>
+                </div>
+                <div>
+                    <input type="text" placeholder="First name" class="fields" id="firstname" onfocusout="validate_firstname()">
+                </div>
+                <div>
+                    <label id="firstname_error"></label>
+                </div>
+                <div>
+                    <input type="text" placeholder="Last name" class="fields" id="lastname" onfocusout="validate_lastname()">
+                </div>
+                <div>
+                    <label id="lastname_error"></label>
+                </div>
+                <div>
+                    <label class="gender">Date of birth :  </label>
+                </div>
+                <div>
+                    <input type="date" id="date_of_birth" onfocusout="calculate_age()">
+                </div>
+                <div>
+                    <input type="number" placeholder="Your age" class="fields" id="age">
+                </div>
+                <div>
+                    <label class="gender">Gender  :  </label><input type="radio" name="gender"><label class="gender">Male</label><input type="radio" name="gender"><label class="gender">Female</label><input type="radio" name="gender"><label class="gender">Other</label>
+                </div>
+                <div>
+                    <input type="number" placeholder="Your phone number" class="fields" id="phone_number">
+                </div>
+                <div>
+                    <input type="email" placeholder="Your Email address" class="fields" id="username_input" onfocusout="validate_username()">
+                </div>
+                <div>
+                    <label id="user_error"></label>
+                </div>
+                <div>
+                    <input type="text" placeholder="Your Address" class="fields">
+                </div>
+                <div>
+                    <select class="dropdown" id="stateSelect" onchange="populateCities()">
+                        <option value="">Choose State</option>
+                        <option value="Tamilnadu">Tamilnadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="dropdown" id="citySelect">
+                        <option value="">Choose City</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="Username" class="fields">
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" class="fields" id="password_input" onfocusout="validate_pwd()">
+                </div>
+                <div>
+                    <label id="pwd_error"></label>
+                </div>
+                <div>
+                    <input type="password" placeholder="Confrim password" class="fields" id="confrim_pwd" onfocusout="confrim_password()">
+                </div>
+                <div>
+                    <label id="pwd_confrim"></label>
+                </div>
+                <div>
+                    <button class="btn">Register</button>
+                </div>
+                <div>
+                    <label class="account">Already have an account?</label>
+                    <a href="login.html" class="login">Login</a>
+                </div>
+            </form>
+        </div>
+    </center>
+
+    <!--FOOTER-->
+    <div class="foot">
+        <h4>Address</h4>
+        <blockquote>
+            <address>
+                90,80 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </address>
+        </blockquote>
+        <div>
+            <a href=""><img src="~/Content/Images/facebook.png" alt="Image not found" width="20px" height="20px"></a>
+            <a href=""><img src="~/Content/Images/instagram.png" alt="Image not found" width="20px" height="20px"></a>
+            <a href=""><img src="~/Content/Images/linkedin.png" alt="Image not found" width="20px" height="20px"></a>
+            <a href=""><img src="~/Content/Images/twitter.png" alt="Image not found" width="20px" height="20px"></a>
+        </div><br>
+        <center>
+            <div>&copy; Myproject</div>
+        </center>
+    </div>
+    <!--FOOTER-->
+    <script src="~/Scripts/MyJavaScript/UserRegistrationValidation.js"></script>
+</body>
+</html>
